@@ -28,7 +28,7 @@ class Card {
 
             const imageElement = document.createElement("img");
             imageElement.classList.add("card_image");
-            imageElement.innerText = this.image;
+            imageElement.src = this.image;
             this.element.appendChild(imageElement);
     }
 }
@@ -44,8 +44,12 @@ function getData() {
 function displayCards(cards) {
     // your code goes here
 
-    for(let i = 0; i < data.length; i++){
-
+    for(let i = 0; i < cards.length; i++){
+        const el = document.createElement("div");
+        let card1;
+        card1 = new Card(el, cards[i].name, cards[i].number, cards[i].image)
+        card1.create_return_HTML();
+        containerElement.appendChild(el);
     }
 }
 
