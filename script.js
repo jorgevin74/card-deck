@@ -58,7 +58,3 @@ getData();
 displayCards();
 
 
-// - When the data is loaded, loop through each object and create a new card instance for each one.
-// - Append each card to the page (e.g. inside a `.deck` container).
-
-
